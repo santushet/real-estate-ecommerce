@@ -1,6 +1,9 @@
 'use strict';
 var path = require('path');
 var express = require('express');
+var fs = require('fs');
+var request = require('request');
+var cheerio = require('cheerio');
 var app = express();
 
 module.exports = function (db) {
@@ -28,6 +31,20 @@ module.exports = function (db) {
             next(null);
         }
 
+    });
+
+    app.get('/scrape', function(req, res, next) {
+        var url = "http://www.loopnet.com/for-sale/new-york-ny/";
+
+        request(url, function(err, res, html) {
+            if (!error) {
+                var $ = cheerio.load(html);
+            }
+
+            var title, release, rating;
+            var json = { title: "", release: "", rating: ""};
+
+        })
     });
 
     app.get('/*', function (req, res) {

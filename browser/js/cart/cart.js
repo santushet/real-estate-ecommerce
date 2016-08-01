@@ -27,7 +27,7 @@ app.controller('CartController', function ($scope, theCart, CartFactory) {
   $scope.deleteItem = function (buildingId, index) {
     CartFactory.delete(buildingId)
     .then(function () {
-      $scope.cart.buildings.splice(index, 1); // JA/BG mutability of cart
+      $scope.cart.buildings.splice(index, 1); // JA/BG mutability of cart - lodash
     })
   }
 });

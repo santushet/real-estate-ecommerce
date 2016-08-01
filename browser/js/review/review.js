@@ -19,7 +19,7 @@ app.config(function($stateProvider) {
 
 app.controller('ReviewCtrl', function($scope, theReviews, ReviewFactory) {
     $scope.reviews = theReviews;
-    $scope.getTimes = function(n) {
+    $scope.getTimes = function(n) { // lodash might be good here => _.range
         return new Array(n)
     }
     $scope.sendReview = function() {

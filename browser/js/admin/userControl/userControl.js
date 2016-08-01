@@ -21,7 +21,7 @@ app.controller('UserController', function ($scope, allUsers, UserFactory) {
       .then(() => {
         $scope.users[index].isAdmin = !adminStatus;
       })
-      .catch(console.error);
+      .catch(console.error); // JA/BG try using $log or console.error.bind(console)
   }
 
   $scope.deleteUser = function(userId, index) {

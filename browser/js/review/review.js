@@ -27,7 +27,7 @@ app.controller('ReviewCtrl', function($scope, theReviews, ReviewFactory) {
             .then(function(review) {
                 $state.go('building.reviews')
             })
-            .catch(console.error);
+            .catch(console.error); // JA/BG this will never run because of catch in factory
     }
 });
 

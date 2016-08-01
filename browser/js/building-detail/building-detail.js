@@ -1,9 +1,9 @@
 app.controller('BuildingCtrl', function($scope, theBuilding, CartFactory, $state, AuthService){
   $scope.building = theBuilding;
-  $scope.loggedIn = !AuthService.isAuthenticated();
-  $scope.message = "Please Sign In To Leave a Review";
+  $scope.loggedIn = !AuthService.isAuthenticated(); // JA/BG maybe put loggedInUser in resolve
+  $scope.message = "Please Sign In To Leave a Review"; // JA/BG why not just put this in html?
   $scope.addToCart = function () {
-    CartFactory.add(theBuilding.id);
+    CartFactory.add(theBuilding.id); // JA/BG this is async - what if we go to 'cart' state before this resolves?
     $state.go('cart');
   }
 })

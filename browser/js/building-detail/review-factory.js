@@ -1,4 +1,4 @@
-app.factory('ReviewFactory', function ($http) {
+app.factory('ReviewFactory', function ($http) { // JA/BG why are there 2 review factories?
 
   var ReviewFactory = {};
 

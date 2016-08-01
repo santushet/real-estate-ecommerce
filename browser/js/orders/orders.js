@@ -33,7 +33,7 @@ app.config(function ($stateProvider) {
 app.controller('OrderController', function ($scope, theOrder) {
   $scope.theOrder = theOrder;
 
-  $scope.getTotal = function () {
+  $scope.getTotal = function () { // JA/BG DRY
       var total = 0;
       for(var i = 0; i < theOrder.purchasedBuildings.length; i++){
           total += theOrder.purchasedBuildings[i].purchasePrice;

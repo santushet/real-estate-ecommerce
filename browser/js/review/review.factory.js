@@ -8,12 +8,12 @@ app.factory('ReviewFactory', function ($http, $stateParams) {
   };
 
   ReviewFactory.create = function (data) {
-    data.buildingId = $stateParams.id
+    data.buildingId = $stateParams.id // JA/BG should not be using $stateParams in factory
     return $http.post('/api/reviews/', data)
     .then(function (response) {
     console.log(response)
      return response.data; })
-    .catch(function(error){console.error(error);
+    .catch(function(error){console.error(error); // JA/BG error should be caught in controller
     });
   };
 

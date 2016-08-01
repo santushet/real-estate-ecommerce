@@ -19,7 +19,7 @@ app.controller('CheckoutCtrl', function ($scope, $state, OrderFactory) {
         .then(function(res) {
             $state.go('checkoutSuccess', {id: res});
         })
-        .catch(function() {
+        .catch(function() { // JA/BG why throw custom error if error is created in factory?
             $scope.error = 'Invalid shipping credentials';
         });
     }

@@ -1,3 +1,4 @@
+console.log("@@@@@@@Test", process.env.NODE_ENV);
 module.exports = {
   "DATABASE_URI": "postgres://localhost:5432/testing-fsg",
   "SESSION_SECRET": "Optimus Prime is my real dad",

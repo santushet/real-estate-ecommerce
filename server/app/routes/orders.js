@@ -2,7 +2,7 @@ var express = require('express');
 var router = new express.Router();
 var fs = require('fs');
 
-
+console.log("$$$$DirN", __dirname);
 var secretMG = JSON.parse(fs.readFileSync(__dirname+'/../../../../secretMG.txt','utf8'));
 
 var nodemailer = require('nodemailer');

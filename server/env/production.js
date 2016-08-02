@@ -5,19 +5,21 @@
     applications environment, along with NODE_ENV=production
 
  */
+var fs = require('fs');
+var secretFB = JSON.parse(fs.readFileSync(__dirname+'/../../../secreFB.txt','utf8'));
 
 module.exports = {
-    "DATABASE_URI": process.env.DATABASE_URI,
-    "SESSION_SECRET": process.env.SESSION_SECRET,
+    "DATABASE_URI": "postgres://localhost:5432/fsg",
+    "SESSION_SECRET": "Optimus Prime is my real data",
     "TWITTER": {
         "consumerKey": process.env.TWITTER_CONSUMER_KEY,
         "consumerSecret": process.env.TWITTER_CONSUMER_SECRET,
         "callbackUrl": process.env.TWITTER_CALLBACK
     },
     "FACEBOOK": {
-        "clientID": process.env.FACEBOOK_APP_ID,
-        "clientSecret": process.env.FACEBOOK_CLIENT_SECRET,
-        "callbackURL": process.env.FACEBOOK_CALLBACK_URL
+        "clientID": secretFB.client,
+        "clientSecret": secretFB.secret,
+        "callbackURL": secretFB.cb
     },
     "GOOGLE": {
         "clientID": process.env.GOOGLE_CLIENT_ID,

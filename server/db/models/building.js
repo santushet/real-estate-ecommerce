@@ -54,10 +54,7 @@ module.exports = db.define('building', {
         type: Sequelize.TEXT
     },
     photoURL: {
-        type: Sequelize.STRING,
-        validate: {
-            isUrl: true
-        }
+        type: Sequelize.STRING
     }
 
 

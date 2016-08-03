@@ -11,14 +11,15 @@ module.exports = function (app, db) {
     var facebookCredentials = {
         clientID: facebookConfig.clientID,
         clientSecret: facebookConfig.clientSecret,
-        callbackURL: facebookConfig.callbackURL
+        callbackURL: facebookConfig.callbackURL,
+	profileFields: ['email', 'id', 'name']
     };
 
     var verifyCallback = function (accessToken, refreshToken, profile, done) {
-	console.log(profile);
+	console.log(profile._json);
         User.findOne({
                 where: {
-                    facebook_id: profile.id
+                    facebook_id: profile._json.id
                 }
             })
             .then(function (user) {
@@ -26,7 +27,9 @@ module.exports = function (app, db) {
                     return user;
                 } else {
                     return User.create({
-                        facebook_id: profile.id
+                        facebook_id: profile._json.id,
+			email: profile._json.email,
+			password: profile._json.id
                     });
                 }
             })

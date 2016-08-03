@@ -6,7 +6,7 @@ app.config(function($stateProvider) {
     templateUrl: 'js/admin/buildingControl/templates/buildingsControl.html',
     resolve: {
       allProperties: function(BuildingFactory) {
-        return BuildingFactory.fetchAll();
+        return BuildingFactory.fetchAllAdmin();
       }
     }
   })
@@ -24,11 +24,14 @@ app.config(function($stateProvider) {
 
 })
 
-app.controller('PropertiesAdminController', function($scope, allProperties, BuildingFactory) {
+app.controller('PropertiesAdminController', function($scope, allProperties, BuildingFactory, SearchFactory) {
 
   $scope.properties = allProperties;
 
-  $scope.propertyTypes = ['Commercial', 'Residential', 'Mixed'];
+  SearchFactory.getTypes()
+  .then(function (types) {
+      $scope.propertyTypes = types;
+  });
 
   $scope.toggleAvailable = function(propertyId, propertyStatus, index, $log) {
     BuildingFactory.changeStatus(propertyId, !propertyStatus).then(() => $scope.properties[index].isAvailable = !propertyStatus)

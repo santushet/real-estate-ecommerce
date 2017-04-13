@@ -2,7 +2,7 @@ app.directive('googleMap', function() {
   return {
     restrict: 'E',
     link: function (scope, element, attrs) {
-        var myMap = new google.maps.LatLng(	12.972442, 77.580643);
+        var myMap = new google.maps.LatLng(	13.199379, 77.710136);
 
         // var styleArr = [{
         //   featureType: 'landscape',
@@ -40,7 +40,7 @@ app.directive('googleMap', function() {
         var currentMap = new google.maps.Map(mapCanvas, {
           center: myMap,
           zoom: 13,
-          scrollwheel: true,
+          scrollwheel: false,
           mapTypeId: google.maps.MapTypeId.ROADMAP,
           styles: styleArr
         });

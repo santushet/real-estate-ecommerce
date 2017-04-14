@@ -46,9 +46,9 @@ app.directive('googleMap', function() {
         });
 
           // var iconURLs = {
-          //   hotel: '/images/lodging_0star.png',
-          //   restaurant: '/images/restaurant.png',
-          //   activity: '/images/star-3.png'
+          //   hotel: '/img/lodging_0star.png',
+          //   restaurant: '/img/icon-resturant.png',
+          //   activity: '/img/icon-star.png'
           // };
 
           // function drawMarker (type, coords) {
@@ -60,10 +60,10 @@ app.directive('googleMap', function() {
           //   });
           //   marker.setMap(currentMap);
           // }
-
-          // drawMarker('hotel', [40.705137, -74.007624]);
-          // drawMarker('restaurant', [40.705137, -74.013940]);
-          // drawMarker('activity', [40.716291, -73.995315]);
+          //
+          // drawMarker('hotel', [13.199379, 77.710136]);
+          // drawMarker('restaurant', [13.199379, 77.710136]);
+          // drawMarker('activity', [13.199379, 77.710136]);
 
     }
   }

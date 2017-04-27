@@ -1,140 +1,129 @@
-<div class="homepage-10">
+ <div class="homepage-10">
     <!--slider Section Start Here -->
     <section id="slider">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- Map Large Banner -->
-                <section class="map-large-banner img-style">
-                    <google-map id="custom-map-two"></google-map>
-                    <div class="map-banner-quote">
-                        <div class="container">
-                            <div class="map-quote-banner">
-                                <h2>Apartments for sale in <em>Devanahalli!</em></h2>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Map Large Banner -->
-                <div class="resto-info">
-                    <div class="container">
-                        <ul class="auto-tab-list">
-                            <li class="active"> <a>Search</a> </li>
-                        </ul>
-                        <div class="mid clearfix">
-                            <form name="searchForm" ng-submit="search()">
-                                <div class=" col-md-3 form-field">
-                                    <!-- <div class="btn-group">
-                    <input type="search" ng-model="searchProps.zipCode" placeholder="ZIP Code" />
-                  </div> -->
-
-                                    <div class="btn-group">
-                                        <select class="dropdown-toggle select-text" name="typeInput" data-toggle="dropdown" ng-model="searchProps.propertyType" ng-options="type as type for type in types"><option class="select-text" value="">Property Type</option> </select>
-                                    </div>
-
-                                </div>
-                                <div class="col-md-3 form-field">
-                                    <!-- <div class="btn-group">
-                    <select class="dropdown-toggle" name="styleInput" data-toggle="dropdown" ng-model="searchProps.architecturalStyle" ng-options="style as style for style in styles"> <option class="select-text" value="">Architectural Style</option> </select>
-                  </div> -->
-                                    <div class="btn-group">
-                                        <select class="dropdown-toggle" name="floorsRange" data-toggle="dropdown" ng-model="searchProps.stories" ng-options="story.i as story.range for story in stories"> <option class="select-text" value="">BHK</option> </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 form-field">
-                                    <div class="price-meter-wrap">
-                                        <div class="btn-group"><input type="number" ng-model="minPrice" placeholder="Min Price" /></div>
-                                        <!-- <div class="btn-group"><input type="number" ng-model="maxPrice" placeholder="Max Price" /></div> -->
-                                        <!-- <div class="row">
-                                            <div class="col-xs-12"> <button type="submit" class="btn btn-default btn-effect" ng-click="search()">Search properties <img src="/img/arrow-btn.png"/> </button> </div>
-                                        </div> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-3 form-field">
-                                    <div class="price-meter-wrap">
-                                        <!-- <div class="btn-group"><input type="number" ng-model="minPrice" placeholder="Min Price" /></div> -->
-                                        <div class="btn-group"><input type="number" ng-model="maxPrice" placeholder="Max Price" /></div>
-                                        <div class="row">
-                                            <div class="col-xs-12"> <button type="submit" class="btn btn-default btn-effect" ng-click="search()">Search properties <img src="/img/arrow-btn.png"/> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Map Large Banner -->
+          <section class="map-large-banner img-style">
+            <google-map id="custom-map-two"></google-map>
+            <div class="map-banner-quote">
+              <div class="container">
+                <div class="map-quote-banner">
+                  <h2>Apartments for sale in <em>Devanahalli!</em></h2>
                 </div>
+              </div>
             </div>
+          </section>
+          <!-- Map Large Banner -->
+          <div class="resto-info">
+            <div class="container">
+              <ul class="auto-tab-list">
+                <li class="active"> <a>Search</a> </li>
+              </ul>
+              <div class="mid clearfix">
+              <form name="searchForm" ng-submit="search()">
+                <div class=" col-md-4 form-field">
+                  <div class="btn-group">
+                    <input type="search" ng-model="searchProps.zipCode" placeholder="ZIP Code" />
+                  </div>
+                  <div class="btn-group">
+                    <select class="dropdown-toggle select-text" name="typeInput" data-toggle="dropdown" ng-model="searchProps.propertyType" ng-options="type as type for type in types" ><option class="select-text" value="">Use Type</option> </select>
+                  </div>
+                </div>
+                <div class="col-md-4 form-field">
+                  <div class="btn-group">
+                    <select class="dropdown-toggle" name="styleInput" data-toggle="dropdown" ng-model="searchProps.architecturalStyle" ng-options="style as style for style in styles"> <option class="select-text" value="">Architectural Style</option> </select>
+                  </div>
+                  <div class="btn-group">
+                    <select class="dropdown-toggle" name="floorsRange" data-toggle="dropdown" ng-model="searchProps.stories" ng-options="story.i as story.range for story in stories"> <option class="select-text" value="">Floors</option> </select>
+                  </div>
+                </div>
+                <div class="col-md-4 form-field">
+                  <div class="price-meter-wrap">
+                   <div class="btn-group"><input type="number" ng-model="minPrice" placeholder="Min Price" /></div>
+                   <div class="btn-group"><input type="number" ng-model="maxPrice" placeholder="Max Price" /></div>
+                  <div class="row">
+                </form>
+                   <div class="col-xs-12"> <button type="submit" class="btn btn-default btn-effect" ng-click="search()">Search properties <img src="/img/arrow-btn.png"/> </button> </div>
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!--slider Section End Here -->
 
     <div id="content">
 
-        <!-- Rent Features -->
-        <section class="rent-features">
-            <div class="container">
-                <!--  icon-box   -->
+      <!-- Rent Features -->
+      <section class="rent-features">
+        <div class="container">
+          <!--  icon-box   -->
 
-                <section class="org-info icon-box">
-                    <div class="services steps row">
-                        <div class="col-md-3 col-sm-6 effect-a">
-                            <div class="one service-block shine">
-                                <h3><i class="hot-list" ui-sref="buildings"><img src="/svg/hotlist.svg" alt="" class="svg" /></i><span>View <small>All Buildings</small></span></h3>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 effect-b">
-                            <div class="one service-block shine">
-                                <h3><i class="ex-offer" ui-sref="contact"><img src="/svg/ex-offer.svg" alt="" class="svg" /></i><span>Questions?<small>Email us!</small></span></h3>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6 effect-c">
-                            <div class="one service-block shine">
-                                <h3><i class="movers" ui-sref="signup"><img src="/svg/mover.svg" alt="" class="svg" /></i><span>Become a <small>Member Today!</small></span></h3>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="rent-adv"> <strong class="h2">Invest!</strong> </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-        <!-- Rent Features -->
-
-        <!-- Rent banner -->
-        <section class="rent-banner parallax">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2 class="wordsForParallax"> More than <a href="#"> 1 000 </a> properties for sale here at Devanahalli </h2>
-                    </div>
+          <section class="org-info icon-box">
+            <div class="services steps row">
+              <div class="col-md-3 col-sm-6 effect-a">
+                <div class="one service-block shine">
+                  <h3><i class="hot-list" ui-sref="buildings"><img src="/svg/hotlist.svg" alt="" class="svg" /></i><span>View <small>All Buildings</small></span></h3>
                 </div>
+              </div>
+              <div class="col-md-3 col-sm-6 effect-b">
+                <div class="one service-block shine">
+                  <h3><i class="ex-offer" ui-sref="contact"><img src="/svg/ex-offer.svg" alt="" class="svg" /></i><span>Questions?<small>Email us!</small></span></h3>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6 effect-c">
+                <div class="one service-block shine">
+                  <h3><i class="movers" ui-sref="signup"><img src="/svg/mover.svg" alt="" class="svg" /></i><span>Become a <small>Member Today!</small></span></h3>
+                </div>
+              </div>
+              <div class="col-md-3 col-sm-6">
+                <div class="rent-adv"> <strong class="h2">Invest!</strong> </div>
+              </div>
             </div>
-        </section>
-        <!-- Rent banner -->
-
-        <!-- New Sale       -->
-
-        <section class="new-sale">
-            <div class="container fromTop">
-                <h2> New Properties for Sale </h2>
-                <div class="row">
-                    <div ng-repeat="building in buildings | orderBy:'-buildingId':'true' | limitTo:6" class="col-md-4 col-sm-6 zoom" ui-sref="building({id: building.id})">
-                        <div class="rent-box">
-                            <figure class="rent-description"><img ng-src={{building.photoURL}} alt="" /></figure>
-                            <div class="property-widget">
-                                <div class="property-header clearfix"> <strong class="caption">{{building.propertyType}} </strong><span>{{building.squareFootage}}</span> </div>
-                                <h3><a href="#">{{building.streetAddress}}</a></h3>
-                                <ul>
-                                    <li> Stories <span class="avl-no">{{building.stories}}</span> </li>
-                                    <li> Units <span class="avl-no">{{building.numberOfUnits}}</span> </li>
-                                    <li> Building Age <span class="avl-no">{{building.buildingAge}}</span> </li>
-                                </ul>
-                                <span class="price">$ {{building.price}}</span></div>
-                        </div>
-                    </div>
-
-                    <a ui-sref="buildings" class="btn btn-default btn-effect"> view more <i> <img src="/img/arrow-btn.png" alt="" /> </i></a> </div>
-        </section>
-        <!-- New Sale       -->
+          </section>
         </div>
-    </div>
+      </section>
+      <!-- Rent Features -->
+
+      <!-- Rent banner -->
+      <section class="rent-banner parallax">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <h2 class="wordsForParallax"> More than <a href="#"> 1 000 </a> properties for sale here at Devanahalli </h2>
+              </div>
+          </div>
+        </div>
+      </section>
+      <!-- Rent banner -->
+
+      <!-- New Sale       -->
+
+      <section class="new-sale">
+        <div class="container fromTop" >
+          <h2> New Properties for Sale </h2>
+ <div class="row">
+      <div ng-repeat="building in buildings | orderBy:'-buildingId':'true' | limitTo:6" class="col-md-4 col-sm-6 zoom" ui-sref="building({id: building.id})">
+        <div class="rent-box">
+          <figure class="rent-description"><img ng-src={{building.photoURL}} alt="" /></figure>
+          <div class="property-widget">
+            <div class="property-header clearfix"> <strong class="caption">{{building.propertyType}} </strong><span>{{building.squareFootage}}</span> </div>
+            <h3><a href="#">{{building.streetAddress}}</a></h3>
+            <ul>
+              <li> Stories <span class="avl-no">{{building.stories}}</span> </li>
+              <li> Units <span class="avl-no">{{building.numberOfUnits}}</span> </li>
+              <li> Building Age <span class="avl-no">{{building.buildingAge}}</span> </li>
+            </ul>
+            <span class="price">$ {{building.price}}</span></div>
+        </div>
+      </div>
+
+          <a ui-sref="buildings" class="btn btn-default btn-effect"> view more <i> <img src="/img/arrow-btn.png" alt="" /> </i></a> </div>
+      </section>
+      <!-- New Sale       -->
+  </div>
+</div>

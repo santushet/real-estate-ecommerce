@@ -7,12 +7,12 @@ app.controller('BuildingCtrl', function($scope, theBuilding, CartFactory, $state
        $anchorScroll();
     });
 
-  // $scope.error = null;
-  // $scope.addToCart = function () {
-  //   CartFactory.add(theBuilding.id)
-  //   .then( () => { $state.go('cart'); })
-  //   .catch( () => { $scope.error = 'Already in your Cart!' })
-  // }
+  $scope.error = null;
+  $scope.addToCart = function () {
+    CartFactory.add(theBuilding.id)
+    .then( () => { $state.go('cart'); })
+    .catch( () => { $scope.error = 'Already in your Cart!' })
+  }
 })
 
 
@@ -53,3 +53,4 @@ app.config(function ($stateProvider) {
     }
   })
 })
+
